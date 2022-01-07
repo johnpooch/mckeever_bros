@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site_settings.title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %} {% load compress %} {% compress css %} <link
+    rel="stylesheet" type="text/x-scss" href="{% static "css/main.scss" %}" />
+    {% endcompress %}
+  </head>
+  <body>
+    {% block nav %} {% include 'nav.html' %} {% endblock %}
+    <main>{% block content %} {% endblock content %}</main>
+    {% block footer %} {% include 'footer.html' %} {% endblock %}
+  </body>
+</html>

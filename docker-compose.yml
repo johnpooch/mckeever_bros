@@ -1,0 +1,43 @@
+version: '3.6'
+
+services:
+  mailcatcher.smtp:
+    image: schickling/mailcatcher
+    ports:
+      - '127.0.0.1:1080:1080'
+    networks:
+      - backend
+  project.db:
+    image: 'mariadb:latest'
+    restart: always
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_PORT=3306
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=project
+      - MYSQL_USER=APP_USER
+      - MYSQL_PASSWORD=APP_USER
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - backend
+  project.web:
+    command: python ./project/manage.py runserver 0.0.0.0:8000
+    build: 
+      args:
+        - ENV=dev
+      context: .
+      dockerfile: .docker/Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - "127.0.0.1:8082:8000"
+    environment:
+      - RUNTIMEINSTALL=1
+      - RUNMIGRATIONS=1
+      - WAITFOR=project.mysql:3306
+    depends_on:
+      - project.db
+    networks:
+      - backend
+networks:
+  backend:

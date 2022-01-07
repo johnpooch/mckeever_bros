@@ -1,0 +1,66 @@
+{% load static %} {% load compress %} {% compress css %} <link rel="stylesheet"
+type="text/x-scss" href="{% static "css/main.scss" %}" /> {% endcompress %}
+
+<div class="stylesheet-typography-container">
+  <h2>Typography</h2>
+  <div>
+    <div>
+      <ul>
+        <li><h1>Header 1</h1></li>
+        <li><h2>Header 2</h2></li>
+        <li><h3>Header 3</h3></li>
+        <li><span class="subtitle">Subtitle</span></li>
+        <li><strong>Strong</strong></li>
+        <li><span>Body</span></li>
+        <li><small>Small</small></li>
+        <li><button>Button</button></li>
+      </ul>
+    </div>
+    <div>
+      <p>
+        This example type scale uses the Roboto typeface for all headlines,
+        subtitles, body, and captions, creating a cohesive typography
+        experience. Hierarchy is communicated through differences in font weight
+        (Light, Medium, Regular), size, letter spacing, and case.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="stylesheet-palette-container">
+  <h2>Palette</h2>
+  <div>
+    <div>
+      <ul>
+        <li>
+          <h3>Primary</h3>
+          <ul>
+            <li class="stylesheet-color-square palette-primary-main"></li>
+            <li class="stylesheet-color-square palette-primary-variant"></li>
+          </ul>
+        </li>
+        <li>
+          <h3>Secondary</h3>
+          <ul>
+            <li class="stylesheet-color-square palette-secondary-main"></li>
+            <li class="stylesheet-color-square palette-secondary-variant"></li>
+          </ul>
+        </li>
+        <li>
+          <h3>Text</h3>
+          <ul>
+            <li class="stylesheet-color-square palette-text-main"></li>
+            <li class="stylesheet-color-square palette-text-variant"></li>
+          </ul>
+        </li>
+        <li>
+          <h3>Surface</h3>
+          <ul>
+            <li class="stylesheet-color-square palette-surface-main"></li>
+            <li class="stylesheet-color-square palette-surface-variant"></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
