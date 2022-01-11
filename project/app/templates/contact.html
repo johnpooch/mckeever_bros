@@ -1,19 +1,16 @@
 <section class="contact-section" id="contact">
   <div>
     <div class="left">
-      <h3>Get in touch</h3>
-      <p>
-        Help us to help you! Give us a call or send us an email with your
-        requirements and we will be sure to help.
-      </p>
+      <h3>{{ site_settings.contact_header }}</h3>
+      <p>{{ site_settings.contact_description }}</p>
       <ul>
         <li>
           <i class="fas fa-envelope"></i>
-          <span>info@mckeeverbrossafety.com</span>
+          <span> {{ site_settings.email }} </span>
         </li>
         <li>
           <i class="fas fa-phone"></i>
-          <span>+353 87 222 1736</span>
+          <span> {{ site_settings.phone }} </span>
         </li>
       </ul>
     </div>

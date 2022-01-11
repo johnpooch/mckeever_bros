@@ -1,58 +1,44 @@
 <section class="courses-section" id="courses">
   <div>
     <div class="top">
-      <h2>What we offer</h2>
-      <p>
-        McKeever Bros Safety is a leading provider in Health & Safety Courses,
-        specialising in Manual Handling Training. Our accredited instructors
-        provide the highest quality training to keep your workplace safe and
-        compliant with current regulatory requirements.
-      </p>
+      <h2>{{ site_settings.courses_header }}</h2>
+      <p>{{ site_settings.courses_description }}</p>
     </div>
     <div class="middle">
-      <h3>Our Manual Handling Course</h3>
+      <h3>{{ site_settings.courses_manual_handling_header }}</h3>
+      {% if site_settings.courses_manual_handling_description %}
+      <p>{{ site_settings.courses_manual_handling_description }}</p>
+      {% endif %}
       <div>
         <ul>
+          {% for summary_item in manual_handling_summary_items %}
           <li>
-            <i class="fas fa-camera"></i>
-            <span>1-3 Hours (Depending on number of participants)</span>
+            <i class="fas fa-{{ summary_item.icon_name }}"></i>
+            <span>{{ summary_item.label }}</span>
           </li>
-          <li>
-            <i class="fas fa-camera"></i>
-            <span>1-3 Hours (Depending on number of participants)</span>
-          </li>
-          <li>
-            <i class="fas fa-camera"></i>
-            <span>1-3 Hours (Depending on number of participants)</span>
-          </li>
+          {% endfor %}
         </ul>
         <ul>
+          {% for course_outline_item in manual_handling_course_outline_items %}
           <li>
             <i class="fas fa-check-circle"></i>
-            <span>Manual Handling Legislation</span>
+            <span>{{ course_outline_item.label }}</span>
           </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
     <div class="bottom">
-      <h3>Additional courses</h3>
-      <p>
-        We provide a number of other courses. For more information get in touch.
-      </p>
+      <h3>{{ site_settings.courses_other_courses_header }}</h3>
+      <p>{{ site_settings.courses_other_courses_description }}</p>
       <div>
         <ul>
+          {% for item in other_courses_items %}
           <li>
             <i class="fas fa-check-circle"></i>
-            <span>Fire Safety</span>
+            <span>{{ item.label }}</span>
           </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>CPR</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>Working at heights</span>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>

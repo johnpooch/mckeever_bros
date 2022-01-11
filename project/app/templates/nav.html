@@ -6,26 +6,9 @@
       </div>
     </div>
     <div class="right">
-      <div class="nav-links"><a href="#courses">Courses</a><a href="#contact">Contact us</a></div>
+      <div class="nav-links"><a href="#courses">{{ site_settings.nav_courses }}</a><a href="#contact">{{ site_settings.nav_contact }}</a></div>
       <div class="social-links">
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/john-mcdowell-b9882b9b/"
-              target="_blank"
-              rel="noreferrer"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/john-mcdowell-b9882b9b/"
-              target="_blank"
-              rel="noreferrer"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-        </ul>
+        {% include "socials.html" %}
       </div>
     </div>
   </div>
