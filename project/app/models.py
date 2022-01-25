@@ -3,7 +3,6 @@ from django.db import models
 class SiteSettings(models.Model):
 
     title = models.CharField(max_length=200, help_text="The title of the site. Appears at the top of the browser in the tab and also appears in the copyright at the bottom")
-    hero_image = models.ImageField(upload_to="images")
 
     # Nav items
     nav_courses = models.CharField(max_length=20, help_text="Text for nav item which brings the user to the courses section.")
