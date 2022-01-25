@@ -3,6 +3,7 @@ from django.db import models
 class SiteSettings(models.Model):
 
     title = models.CharField(max_length=200, help_text="The title of the site. Appears at the top of the browser in the tab and also appears in the copyright at the bottom")
+    hero_image = models.ImageField(upload_to="images")
 
     # Nav items
     nav_courses = models.CharField(max_length=20, help_text="Text for nav item which brings the user to the courses section.")
@@ -28,7 +29,7 @@ class SiteSettings(models.Model):
     courses_description = models.TextField(help_text="Paragraph that appears under header in courses section")
 
     courses_manual_handling_header = models.CharField(max_length=200, help_text="Header for manual handing sub-section in courses section")
-    courses_manual_handling_description = models.TextField(help_text="Paragraph under manual handing header in courses section")
+    courses_manual_handling_description = models.TextField(help_text="Paragraph under manual handing header in courses section", blank=True, null=True)
 
     courses_other_courses_header = models.CharField(max_length=200, help_text="Header for other courses sub-section in courses section")
     courses_other_courses_description = models.TextField(help_text="Paragraph under other courses header in courses section")
