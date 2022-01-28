@@ -46,3 +46,4 @@ LOGGING = {
 
 # Offline compression for django-compressor
 COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
