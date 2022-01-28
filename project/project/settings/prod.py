@@ -9,7 +9,4 @@ ALLOWED_HOSTS = ['johnpooch-mckeever-bros.herokuapp.com']
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# DEBUG = 'DEBUG' in os.environ
-DEBUG = True
-
 django_heroku.settings(locals())
