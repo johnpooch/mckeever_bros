@@ -10,3 +10,36 @@ ALLOWED_HOSTS = ['johnpooch-mckeever-bros.herokuapp.com']
 SECRET_KEY = os.environ['SECRET_KEY']
 
 django_heroku.settings(locals())
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'formatters': {
+        'verbose': {
+            'format': '[contactor] %(levelname)s %(asctime)s %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': ['DEBUG', 'INFO'],
+            'class': 'logging.StreamHandler',
+        },
+        'mail_admins': {
+            'level': ['WARNING', "ERROR"],
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    }
+}
