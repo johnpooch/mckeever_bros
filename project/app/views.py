@@ -12,7 +12,6 @@ class HomeView(TemplateView):
         context["manual_handling_course_outline_items"] = models.ManualHandlingCourseOutlineItem.objects.all()
         context["other_courses_items"] = models.OtherCoursesItem.objects.all()
         return context
-    
 
 
 class StyleView(TemplateView):
