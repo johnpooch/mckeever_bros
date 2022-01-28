@@ -30,7 +30,7 @@ LOGGING = {
             'class': 'logging.StreamHandler',
         },
         'mail_admins': {
-            'level': 'WARNING'],
+            'level': 'WARNING',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
         },
