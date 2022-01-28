@@ -26,11 +26,11 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': ['DEBUG', 'INFO'],
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
         },
         'mail_admins': {
-            'level': ['WARNING', "ERROR"],
+            'level': 'WARNING'],
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
         },
