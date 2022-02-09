@@ -22,7 +22,7 @@ $border-button-radius: 5px;
 $spacing-nav-height: 64px;
 $spacing-nav-inner-container-width: 1200px;
 $spacing-section-inner-container-width: 1000px;
-$spacing-section-vertical-padding: 48px;
+$spacing-section-vertical-padding: 72px;
 $spacing-button-padding: 12px;
 $spacing-about-section-gap: 24px;
 
@@ -234,7 +234,7 @@ footer {
   background-color: $palette-text-main;
   display: flex;
   justify-content: center;
-  padding: $spacing-section-vertical-padding 0;
+  padding: 48px 0;
   > div {
     width: $spacing-section-inner-container-width;
     display: flex;
