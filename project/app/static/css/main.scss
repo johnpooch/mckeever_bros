@@ -14,7 +14,7 @@ $palette-text-main: #111827;
 $palette-text-variant: #374151;
 $palette-text-contrast: #ffffff;
 $palette-surface-main: #ffffff;
-$palette-surface-variant: #f9fafb;
+$palette-surface-variant: #eeeeee;
 
 $border: solid 1px #e5e7eb;
 $border-button-radius: 5px;
@@ -160,6 +160,7 @@ button {
     }
     li {
       display: flex;
+      align-items: center;
       gap: 16px;
     }
   }
@@ -178,6 +179,7 @@ button {
     li {
       display: flex;
       gap: 16px;
+      align-items: center;
     }
   }
 }
@@ -221,6 +223,7 @@ button {
     gap: 16px;
   }
   li {
+    align-items: center;
     display: flex;
     gap: 16px;
   }
