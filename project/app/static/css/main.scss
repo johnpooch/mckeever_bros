@@ -128,6 +128,9 @@ button {
 }
 
 .courses-section {
+  a {
+    color: $palette-primary-main
+  }
   > div {
     display: flex;
     text-align: center;

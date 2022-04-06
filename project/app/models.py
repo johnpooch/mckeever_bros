@@ -25,8 +25,10 @@ class SiteSettings(models.Model):
     about_column_three_description = models.TextField(help_text="Paragraph for third column in about section")
 
     # Courses
+    courses_url = models.URLField(default="https://mckeeverbrossafety.mykademy.com/")
     courses_header = models.CharField(max_length=200, help_text="Header for courses section")
     courses_description = models.TextField(help_text="Paragraph that appears under header in courses section")
+    courses_booking_prompt = models.TextField(default="")
 
     courses_manual_handling_header = models.CharField(max_length=200, help_text="Header for manual handing sub-section in courses section")
     courses_manual_handling_description = models.TextField(help_text="Paragraph under manual handing header in courses section", blank=True, null=True)

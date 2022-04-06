@@ -3,6 +3,9 @@
     <div class="top">
       <h2>{{ site_settings.courses_header }}</h2>
       <p>{{ site_settings.courses_description }}</p>
+      {% autoescape off %}
+      <p>{{ site_settings.courses_booking_prompt | safe }}</p>
+      {% endautoescape %}
     </div>
     <div class="middle">
       <h3>{{ site_settings.courses_manual_handling_header }}</h3>
