@@ -4,11 +4,16 @@
     <div class="left">
       <h1>{{ site_settings.hero_header }}</h1>
       <p>{{ site_settings.hero_description }}</p>
-      <a href="#contact">
-        <button class="primary" type="button">
-          {{ site_settings.hero_button_label }}
-        </button>
-      </a>
+      <div class="buttons-container">
+        <a href="{{ site_settings.courses_url }}" target="_blank">
+          <button class="primary" type="button">Book online</button>
+        </a>
+        <a href="#contact">
+          <button class="primary" type="button">
+            {{ site_settings.hero_button_label }}
+          </button>
+        </a>
+      </div>
     </div>
     <div class="right">
       <img src="{% static 'images/hero.png' %}" />

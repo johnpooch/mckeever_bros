@@ -108,6 +108,10 @@ button {
 
 .hero-section {
   font-size: 20px;
+  .buttons-container {
+    display: flex;
+    gap: 16px;
+  }
   img {
     max-width: 100%;
   }
@@ -129,7 +133,7 @@ button {
 
 .courses-section {
   a {
-    color: $palette-primary-main
+    color: $palette-primary-main;
   }
   > div {
     display: flex;
@@ -363,6 +367,9 @@ small {
   }
   .hero-section {
     text-align: center;
+    .buttons-container {
+      justify-content: space-evenly;
+    }
     padding: 96px $spacing-section-horizontal-padding-mobile;
     > div {
       .right {
