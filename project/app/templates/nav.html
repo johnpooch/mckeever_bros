@@ -6,10 +6,16 @@
       </div>
     </div>
     <div class="right">
-      <div class="nav-links"><a href="{{ site_settings.courses_url }}" target="_blank">{{ site_settings.nav_courses }}</a><a href="#contact">{{ site_settings.nav_contact }}</a></div>
-      <div class="social-links">
-        {% include "socials.html" %}
+      <div class="nav-links">
+        <a href="#courses"
+          >{{ site_settings.nav_courses }}</a
+        >
+        <a href="{{ site_settings.courses_url }}" target="_blank"
+          >{{ site_settings.nav_online_courses }}</a
+        >
+        <a href="#contact">{{ site_settings.nav_contact }}</a>
       </div>
+      <div class="social-links">{% include "socials.html" %}</div>
     </div>
   </div>
 </nav>

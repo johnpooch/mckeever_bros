@@ -7,6 +7,7 @@ class SiteSettings(models.Model):
 
     # Nav items
     nav_courses = models.CharField(max_length=20, help_text="Text for nav item which brings the user to the courses section.")
+    nav_online_courses = models.CharField(max_length=20, help_text="Text for nav item which brings the user to the online courses section.", default="Online Courses")
     nav_contact = models.CharField(max_length=20, help_text="Text for nav item which brings the user to the contact section.")
 
     # Hero
